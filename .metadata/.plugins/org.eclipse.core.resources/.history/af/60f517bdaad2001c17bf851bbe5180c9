@@ -1,0 +1,41 @@
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class MyFrame extends JFrame implements ActionListener  {
+
+	JButton button;
+	JLabel label;
+	JCheckBox box;
+	
+	MyFrame(){
+		button=new JButton("submit");
+		
+		label = new JLabel("Click on the picture");
+		
+		box = new JCheckBox();
+		
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		this.setLayout(new FlowLayout());		
+		this.add(button);
+		this.add(box);
+		this.add(label);
+		this.pack();
+		this.setVisible(true);
+	}
+	
+	
+	
+	
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}

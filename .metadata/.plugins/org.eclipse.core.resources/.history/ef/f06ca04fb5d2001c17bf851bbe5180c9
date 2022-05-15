@@ -1,0 +1,48 @@
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+
+public class MyFrame extends JFrame implements ActionListener {
+
+	JComboBox combo;
+	
+	MyFrame(){
+		String[] animals= {"dog","cat","bird"};
+		
+		combo = new JComboBox(animals); 
+		combo.addActionListener(this);
+		
+		combo.setEditable(true);
+		System.out.println(combo.getItemCount());
+		combo.addItem("horse");
+		combo.insertItemAt("pig",0);
+		combo.setSelectedIndex(0);
+		combo.removeItem("pig");
+		
+		
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		this.setLayout(new FlowLayout());
+		
+		this.add(combo);
+		this.pack();
+		this.setVisible(true);
+	}
+	
+	
+	
+	
+	
+	
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if(e.getSource()==combo) {
+			System.out.print(combo.getSelectedItem()+"  ");
+			System.out.println(combo.getSelectedIndex());
+		}
+		
+	}
+
+}

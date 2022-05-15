@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Audio/Would it Kill You_ - Mini Vandals.wav&apos; to &apos;sound.wav&apos;" description="Rename resource &apos;Would it Kill You_ - Mini Vandals.wav&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Would it Kill You_ - Mini Vandals.wav" name="sound.wav" stamp="1652020898823" updateReferences="true"/>
+</session>

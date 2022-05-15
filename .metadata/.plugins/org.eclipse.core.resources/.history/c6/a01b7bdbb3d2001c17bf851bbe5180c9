@@ -1,0 +1,36 @@
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+
+public class MyFrame extends JFrame implements ActionListener {
+
+	JComboBox combo;
+	
+	MyFrame(){
+		String[] animals= {"dog","cat","bird"};
+		
+		combo = new JComboBox(animals); 
+		
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		this.setLayout(new FlowLayout());
+		
+		this.add(combo);
+		this.pack();
+		this.setVisible(true);
+	}
+	
+	
+	
+	
+	
+	
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

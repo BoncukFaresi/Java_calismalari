@@ -1,0 +1,18 @@
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="java.lang.Cloneable"><rhs name\="java.util.Locale"/><rhs name\="java.awt.Dimension"/></lhs><lhs name\="Vehicle"><rhs name\="Bicycle"/><rhs name\="Vehicle"/></lhs><lhs name\="Bicycle"><rhs name\="Bicycle"/></lhs><lhs name\="Animal"><rhs name\="Dog"/><rhs name\="Animal"/></lhs><lhs name\="Dog"><rhs name\="Dog"/></lhs><lhs name\="Person"><rhs name\="Hero"/></lhs><lhs name\="Hero"><rhs name\="Hero"/></lhs><lhs name\="package2.C"><rhs name\="package2.C"/></lhs><lhs name\="Car"><rhs name\="Car"/></lhs><lhs name\="Prey"><rhs name\="Rabbit"/><rhs name\="Fish"/></lhs><lhs name\="Rabbit"><rhs name\="Rabbit"/></lhs><lhs name\="Predator"><rhs name\="Hawk"/><rhs name\="Fish"/></lhs><lhs name\="Hawk"><rhs name\="Hawk"/></lhs><lhs name\="Fish"><rhs name\="Fish"/></lhs><lhs name\="Boat"><rhs name\="Boat"/></lhs><lhs name\="java.awt.Paint"><rhs name\="java.awt.Color"/></lhs><lhs name\="java.awt.Transparency"><rhs name\="java.awt.Color"/></lhs><lhs name\="java.awt.Color"><rhs name\="java.awt.Color"/></lhs><lhs name\="java.awt.LayoutManager"><rhs name\="java.awt.GridLayout"/><rhs name\="java.awt.BorderLayout"/><rhs name\="java.awt.FlowLayout"/></lhs><lhs name\="java.awt.geom.Dimension2D"><rhs name\="java.awt.Dimension"/></lhs><lhs name\="java.awt.Dimension"><rhs name\="java.awt.Dimension"/></lhs></history>
+content_assist_number_of_computers=12
+eclipse.preferences.version=1
+org.eclipse.jdt.ui.formatterprofiles.version=21
+spelling_ignore_ampersand_in_properties=true
+spelling_ignore_digits=true
+spelling_ignore_java_strings=true
+spelling_ignore_mixed=true
+spelling_ignore_non_letters=true
+spelling_ignore_sentence=true
+spelling_ignore_single_letters=true
+spelling_ignore_upper=true
+spelling_ignore_urls=true
+spelling_locale_initialized=true
+spelling_user_dictionary_encoding=
+typefilter_migrated_2=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

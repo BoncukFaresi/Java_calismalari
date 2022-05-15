@@ -1,0 +1,17 @@
+import javax.swing.JOptionPane;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		//JOptionPane.showMessageDialog(null,"This some useless info","Plain",JOptionPane.PLAIN_MESSAGE);
+		//JOptionPane.showMessageDialog(null,"This more useless info","Ýnfo",JOptionPane.INFORMATION_MESSAGE);
+		//JOptionPane.showMessageDialog(null,"Really ?","Question",JOptionPane.QUESTION_MESSAGE);
+		//JOptionPane.showMessageDialog(null,"Your computer has a VÝRUS!!!","Warning",JOptionPane.WARNING_MESSAGE);
+		//JOptionPane.showMessageDialog(null,"Call tech support NOW OR ELSE!!!","Error",JOptionPane.ERROR_MESSAGE);
+		
+		JOptionPane.showConfirmDialog(null,"Bro do you even code? ","This is my title",JOptionPane.YES_NO_CANCEL_OPTION);
+
+	}
+
+}

@@ -1,0 +1,48 @@
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+
+public class MyFrame extends JFrame implements ActionListener {
+
+	
+	
+	MyFrame(){
+		JMenuBar bar = new JMenuBar();
+		
+		JMenu file = new JMenu("File");
+		JMenu edit = new JMenu("Edit");
+		JMenu help = new JMenu("Help");
+		
+		JMenuItem loaditem = new JMenuItem("Load");
+		JMenuItem save = new JMenuItem("Save");
+		JMenuItem exit = new JMenuItem("Exit");
+				
+		file.add(loaditem);
+		file.add(save);
+		file.add(exit);
+		
+		bar.add(file);
+		bar.add(edit);
+		bar.add(help);
+		
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		this.setLayout(new FlowLayout());;
+		this.setSize(500,500);
+		this.setJMenuBar(bar);
+		this.setVisible(true);
+	}
+	
+	
+	
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,15 @@
+import javax.swing.JOptionPane;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		JOptionPane.showMessageDialog(null,"This some useless info","Title",JOptionPane.PLAIN_MESSAGE);
+		JOptionPane.showMessageDialog(null,"This some useless info","Title",JOptionPane.INFORMATION_MESSAGE);
+		JOptionPane.showMessageDialog(null,"This some useless info","Title",JOptionPane.QUESTION_MESSAGE);
+		JOptionPane.showMessageDialog(null,"This some useless info","Title",JOptionPane.WARNING_MESSAGE);
+		JOptionPane.showMessageDialog(null,"This some useless info","Title",JOptionPane.ERROR_MESSAGE);
+
+	}
+
+}

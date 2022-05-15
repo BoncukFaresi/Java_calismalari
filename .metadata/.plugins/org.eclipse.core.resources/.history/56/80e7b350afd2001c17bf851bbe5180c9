@@ -1,0 +1,44 @@
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JFrame;
+import javax.swing.JRadioButton;
+
+public class MyFrame extends JFrame implements ActionListener {
+
+	JRadioButton pizza ;
+	JRadioButton hamburger;
+	JRadioButton hotdog;
+	
+	MyFrame(){
+		pizza = new JRadioButton();
+		pizza.setText("Pizza");
+		
+		hamburger = new JRadioButton();
+		hamburger.setText("Hamburger");
+		
+		hotdog = new JRadioButton(); 
+		hotdog.setText("Hotdog");
+				
+		
+		
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		this.setLayout(new FlowLayout());
+		this.add(hamburger);
+		this.add(hotdog);
+		this.add(pizza);
+		this.pack();
+		this.setVisible(true);
+		
+	}
+	
+	
+	
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,37 @@
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JTextField;
+
+public class MyFrame extends JFrame implements ActionListener{
+
+	MyFrame(){
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		this.setLayout(new FlowLayout());
+		
+		JButton button = new JButton("Submit");
+		button.
+		
+		JTextField textfield = new JTextField();
+		textfield.setPreferredSize(new Dimension(250,40));
+		
+		this.add(button);
+		this.add(textfield);
+		this.setVisible(true);
+		this.pack();
+	}
+	
+	
+	
+	
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
