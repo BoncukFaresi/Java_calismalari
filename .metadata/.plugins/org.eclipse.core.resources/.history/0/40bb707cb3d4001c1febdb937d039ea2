@@ -1,0 +1,59 @@
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class LogIn extends JFrame implements ActionListener {
+	
+	JLabel Kullanici;
+	JLabel Sifre;
+	JTextField kul;
+	JTextField sif;
+	
+
+	//---------------Constructor--------------------
+	LogIn(){
+		JPanel panel = new JPanel();
+		panel.setPreferredSize(new Dimension(200,150));
+		panel.setBackground(Color.GRAY);
+		panel.setLayout(new FlowLayout());
+		
+		Kullanici = new JLabel("Kullanýcý:");
+		
+		Sifre = new JLabel("Þifre:");
+		
+		kul = new JTextField();
+		kul.setPreferredSize(new Dimension(100,20));
+		
+		sif = new JTextField();
+		sif.setPreferredSize(new Dimension(100,20));
+		
+		//-------------Frame Düzenleme--------------
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setLayout(new FlowLayout(FlowLayout.RIGHT,10,10));
+		panel.add(Kullanici);
+		panel.add(kul);
+		panel.add(Sifre);
+		panel.add(sif);
+		this.add(panel);
+		this.pack();
+		this.setVisible(true);
+		
+	}
+	
+	
+	
+	
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}

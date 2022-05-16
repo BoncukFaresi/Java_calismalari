@@ -1,0 +1,51 @@
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+public class LogIn extends JFrame implements ActionListener {
+	
+	JLabel Kullanici;
+	JLabel Sifre;
+	JTextField kul;
+	JTextField sif;
+	
+
+	//---------------Constructor--------------------
+	LogIn(){
+		
+		Kullanici = new JLabel("Kullanýcý:");
+		
+		Sifre = new JLabel("Þifre:");
+		
+		kul = new JTextField();
+		kul.setSize(200,100);
+		
+		sif = new JTextField();
+		sif.setSize(200,100);
+		
+		//-------------Frame Düzenleme--------------
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setLayout(new FlowLayout(FlowLayout.CENTER,10,10));
+		this.add(Kullanici);
+		this.add(kul);
+		this.add(Sifre);
+		this.add(sif);
+		this.pack();
+		this.setVisible(true);
+		
+	}
+	
+	
+	
+	
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}

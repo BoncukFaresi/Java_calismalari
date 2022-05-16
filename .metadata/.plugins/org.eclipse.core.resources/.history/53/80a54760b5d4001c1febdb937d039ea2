@@ -1,0 +1,83 @@
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class LogIn extends JFrame implements ActionListener {
+	
+	JLabel Kullanici;
+	JLabel Sifre;
+	JLabel warn;
+	JTextField kul;
+	JTextField sif;
+	JButton buton;
+	JButton iptal;
+	
+
+	//---------------Constructor--------------------
+	LogIn(){
+		JPanel panel = new JPanel();
+		panel.setPreferredSize(new Dimension(180,140));
+		panel.setBackground(Color.LIGHT_GRAY);
+		panel.setLayout(new FlowLayout(FlowLayout.RIGHT,10,10));
+		
+		JPanel panel2 = new JPanel();
+		panel2.setPreferredSize(new Dimension(180,20));
+		panel2.setBackground(Color.LIGHT_GRAY);
+		
+		Kullanici = new JLabel("Kullanýcý:");
+		
+		Sifre = new JLabel("Þifre:");
+		
+		warn=new JLabel("Yanlýþ Þifre");
+		warn.setForeground(Color.red);
+		
+		kul = new JTextField();
+		kul.setPreferredSize(new Dimension(100,20));
+		
+		sif = new JTextField();
+		sif.setPreferredSize(new Dimension(100,20));
+		
+		buton = new JButton("Giriþ");
+		
+		iptal = new JButton("Ýptal");
+		
+		
+		//-------------Frame Düzenleme--------------
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setLayout(new FlowLayout(FlowLayout.RIGHT,10,10));
+		this.setResizable(false);
+		this.setLocationRelativeTo(null);
+		panel2.add(warn);
+		panel.add(Kullanici);
+		panel.add(kul);
+		panel.add(Sifre);
+		panel.add(sif);
+		panel.add(panel2);
+		panel.add(buton);
+		panel.add(iptal);
+		this.add(panel);
+		this.pack();
+		this.setVisible(true);
+		
+	}
+	
+	
+	
+	
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if(e.getSource()==buton) {
+			
+		}
+		
+	}
+	
+}

@@ -8,6 +8,7 @@
 		<item key="isRegEx" value="false"/>
 		<item key="selection" value="panel"/>
 		<list key="findhistory">
+			<item value="this"/>
 			<item value="frame"/>
 			<item value="ood"/>
 		</list>
