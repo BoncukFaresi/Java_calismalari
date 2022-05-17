@@ -5,6 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.sql.SQLException;
 
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
@@ -24,12 +25,15 @@ public class LogIn extends JFrame implements ActionListener , KeyListener {
 	JPasswordField sif;
 	JButton buton;
 	JButton iptal;
+	dbConnect conn = new dbConnect();
 	
 	char[] pass={'b','1','d','2','m','3'};
 	
 
 	//---------------Constructor--------------------
-	LogIn(){
+	LogIn() throws SQLException{
+		
+		
 		JPanel panel = new JPanel();
 		panel.setPreferredSize(new Dimension(180,140));
 		panel.setBackground(Color.LIGHT_GRAY);
@@ -101,19 +105,26 @@ public class LogIn extends JFrame implements ActionListener , KeyListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if(e.getSource()==buton) {
-			if(kul.getText().equals("nmehmet")) {
-				if(new String(sif.getPassword()).equals("b1d2m3")) {
-					new AnaSayfa();
-					this.dispose();
+			String username = new String(kul.getText());
+			String password = new String(sif.getPassword());
+			try {
+				if(conn.dbContainUser(username)) {
+					if(conn.dbPasswordCheck(password)) {
+						new AnaSayfa(conn.dbid(username));
+						this.dispose();
+					}
+					else {
+						warn.setText("Yanlýþ þifre");
+						warn.setVisible(true);
+					}
 				}
 				else {
-					warn.setText("Yanlýþ þifre");
+					warn.setText("Yanlýþ Kullanýcý Adý");
 					warn.setVisible(true);
 				}
-			}
-			else {
-				warn.setText("Yanlýþ Kullanýcý Adý");
-				warn.setVisible(true);
+			} catch (SQLException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
 			}
 		}
 		else if(e.getSource()==iptal) {
@@ -137,19 +148,26 @@ public class LogIn extends JFrame implements ActionListener , KeyListener {
 	@Override
 	public void keyPressed(KeyEvent e) {
 		if(e.getKeyCode()==10) {
-			if(kul.getText().equals("nmehmet")) {
-				if(new String(sif.getPassword()).equals("b1d2m3")) {
-					new AnaSayfa();
-					this.dispose();
+			String username = new String(kul.getText());
+			String password = new String(sif.getPassword());
+			try {
+				if(conn.dbContainUser(username)) {
+					if(conn.dbPasswordCheck(password)) {
+						new AnaSayfa(conn.dbid(username));
+						this.dispose();
+					}
+					else {
+						warn.setText("Yanlýþ þifre");
+						warn.setVisible(true);
+					}
 				}
 				else {
-					warn.setText("Yanlýþ þifre");
+					warn.setText("Yanlýþ Kullanýcý Adý");
 					warn.setVisible(true);
 				}
-			}
-			else {
-				warn.setText("Yanlýþ Kullanýcý Adý");
-				warn.setVisible(true);
+			} catch (SQLException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
 			}
 		}
 		
