@@ -5,6 +5,8 @@ import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.sql.SQLException;
 
 import javax.swing.BorderFactory;
@@ -15,6 +17,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class AnaSayfa extends JFrame implements ActionListener {
+	
+	Personel personel;
 
 	JPanel sgPanel;
 	JPanel altPanel;
@@ -24,6 +28,7 @@ public class AnaSayfa extends JFrame implements ActionListener {
 	JButton islem;
 	JButton Muhasebe;
 	dbConnect conn;
+
 	
 	JLabel hg;
 	
@@ -52,7 +57,7 @@ public class AnaSayfa extends JFrame implements ActionListener {
 		altPanel.add(hg);
 		
 				
-		this.setDefaultCloseOperation();
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setLayout(new BorderLayout(10,10));
 		this.setSize(500,300);
 		this.setTitle("Ana Sayfa");
@@ -62,21 +67,33 @@ public class AnaSayfa extends JFrame implements ActionListener {
 		this.setLocationRelativeTo(null);
 		this.setVisible(true);
 		
+		
 		if(yetki>0) {
 			personelfr.setEnabled(false);
 		}
+		
+		
 	}
 	
 	private void setDefaultCloseOperation() {
-		this.dispose();
+		System.exit(0);
 		
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
+		if(e.getSource()==personelfr) {
+			
+				try {
+					personel = new Personel();
+					
+				} catch (SQLException e1) {
+					e1.printStackTrace();
+				}			
+			}
+			
+		}
 		
 	}
-	
 
-}
+

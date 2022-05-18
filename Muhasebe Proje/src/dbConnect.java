@@ -82,7 +82,35 @@ public int dbgetYetki(int id) throws SQLException {
 		}
 		return yetki.get(0);
 	}
+public Object[][] dbGetPersonel() throws SQLException{
+		myres = mystat.executeQuery("SELECT personel_id,ad,soyad,maas,telno,gorev FROM muhasebe.personel;");
+		ArrayList<Object> bir = new ArrayList<Object>();
+		ArrayList<ArrayList<Object>> tum = new ArrayList<ArrayList<Object>>();
+		while(myres.next()) {
+			bir.clear();
+			bir.add(myres.getObject(1));
+			bir.add(myres.getObject(2));
+			bir.add(myres.getObject(3));
+			bir.add(myres.getObject(4));
+			bir.add(myres.getObject(5));
+			bir.add(myres.getObject(6));
+			
+			tum.add(bir);
+		}
+		
+		Object[][] obje = new Object[tum.size()][6];
+		
+		for(int i=0;i<tum.size();i++) {
+			for(int j=0;j<6;j++) {
+				obje[i][j]=tum.get(i).get(j);
+			}
+		}
+		return obje;
+
+}		
+
 }
+
 
 
 

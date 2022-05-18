@@ -110,7 +110,7 @@ public class LogIn extends JFrame implements ActionListener , KeyListener {
 			try {
 				if(conn.dbContainUser(username)) {
 					if(conn.dbPasswordCheck(password)) {
-						new AnaSayfa(conn.dbid(username));
+						AnaSayfa ana = new AnaSayfa(conn.dbid(username));
 						this.dispose();
 					}
 					else {
@@ -153,7 +153,7 @@ public class LogIn extends JFrame implements ActionListener , KeyListener {
 			try {
 				if(conn.dbContainUser(username)) {
 					if(conn.dbPasswordCheck(password)) {
-						new AnaSayfa(conn.dbid(username));
+						AnaSayfa ana = new AnaSayfa(conn.dbid(username));
 						this.dispose();
 					}
 					else {
